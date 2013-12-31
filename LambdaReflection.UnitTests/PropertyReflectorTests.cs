@@ -1,9 +1,9 @@
 using System.Reflection;
-using LambdaReflector.Generic;
-using LambdaReflector.UnitTests.Helpers;
+using LambdaReflection.Generic;
+using LambdaReflection.UnitTests.Helpers;
 using NUnit.Framework;
 
-namespace LambdaReflector.UnitTests
+namespace LambdaReflection.UnitTests
 {
 	[TestFixture]
 	public class PropertyReflectorTests

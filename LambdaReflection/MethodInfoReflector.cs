@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace LambdaReflector
+namespace LambdaReflection
 {
 	public static class MethodInfoReflector
 	{

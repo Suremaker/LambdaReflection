@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using DelegateDecompiler;
 
-namespace LambdaReflector.Generic
+namespace LambdaReflection.Generic
 {
 	public static class PropertyReflector<TType>
 	{

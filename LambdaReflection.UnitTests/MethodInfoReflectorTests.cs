@@ -1,9 +1,9 @@
 using System;
 using System.Reflection;
-using LambdaReflector.UnitTests.Helpers;
+using LambdaReflection.UnitTests.Helpers;
 using NUnit.Framework;
 
-namespace LambdaReflector.UnitTests
+namespace LambdaReflection.UnitTests
 {
 	[TestFixture]
 	public class MethodInfoReflectorTests

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq.Expressions;
-using LambdaReflector.UnitTests.Helpers;
+using LambdaReflection.UnitTests.Helpers;
 using NUnit.Framework;
 
-namespace LambdaReflector.UnitTests
+namespace LambdaReflection.UnitTests
 {
 	[TestFixture]
 	public class LambdaReflectorTests
@@ -49,14 +49,14 @@ namespace LambdaReflector.UnitTests
 		public void Should_get_property_info_from_getter_lambda()
 		{
 			Expression<Func<SomeClass, string>> getterSelector = c => c.Prop;
-			Assert.That(LambdaExpressionReflector.PropertyFromGetter(getterSelector), Is.EqualTo(typeof(SomeClass).GetProperty("Prop")));
+			Assert.That(LambdaReflector.PropertyFromGetter(getterSelector), Is.EqualTo(typeof(SomeClass).GetProperty("Prop")));
 		}
 
 		[Test]
 		public void Should_MethodInfoFromMethodCall_throw_if_expression_is_not_accessing_property_getter()
 		{
 			Expression<Action> methodCall = () => SomeClass.Bar();
-			var exception = Assert.Throws<ArgumentException>(() => LambdaExpressionReflector.PropertyFromGetter(methodCall));
+			var exception = Assert.Throws<ArgumentException>(() => LambdaReflector.PropertyFromGetter(methodCall));
 			Assert.That(exception.Message, Is.EqualTo("Expected getter selector lambda, got: () => Bar()"));
 		}
 	}

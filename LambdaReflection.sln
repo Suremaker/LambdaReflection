@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B2A6E1F0-247B-45F8-A822-3BE32893A892}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaReflector", "LambdaReflector\LambdaReflector.csproj", "{3A601135-1141-4AAD-97E0-04B92081E4AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaReflection", "LambdaReflection\LambdaReflection.csproj", "{3A601135-1141-4AAD-97E0-04B92081E4AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{632CCFC2-A13B-417B-BAAE-9DAE9E848414}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{632CCF
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaReflector.UnitTests", "LambdaReflector.UnitTests\LambdaReflector.UnitTests.csproj", "{F207A833-9863-4E17-B364-434D7486753B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaReflection.UnitTests", "LambdaReflection.UnitTests\LambdaReflection.UnitTests.csproj", "{F207A833-9863-4E17-B364-434D7486753B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

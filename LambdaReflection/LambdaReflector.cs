@@ -2,9 +2,9 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace LambdaReflector
+namespace LambdaReflection
 {
-	public static class LambdaExpressionReflector
+	public static class LambdaReflector
 	{
 		/// <summary>
 		/// Retrieves method info for method called in <c>methodCall</c> lambda expression.
