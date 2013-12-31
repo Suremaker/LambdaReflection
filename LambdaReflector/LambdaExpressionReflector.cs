@@ -2,9 +2,9 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace LambdaReflector.Core
+namespace LambdaReflector
 {
-	public static class LambdaReflector
+	public static class LambdaExpressionReflector
 	{
 		/// <summary>
 		/// Retrieves method info for method called in <c>methodCall</c> lambda expression.
@@ -15,7 +15,7 @@ namespace LambdaReflector.Core
 		/// <param name="methodCall">Method call lambda expression.</param>
 		/// <returns>Property info.</returns>
 		/// <exception cref="ArgumentException">It expects the most outer expression to be method call. If it is not, an ArgumentException is thrown.</exception>
-		public static MethodInfo MethodInfoFromMethodCall(this LambdaExpression methodCall)
+		public static MethodInfo MethodFromMethodCall(this LambdaExpression methodCall)
 		{
 			try
 			{
@@ -33,7 +33,7 @@ namespace LambdaReflector.Core
 		/// <param name="getterSelector">Getter selector lambda expression.</param>
 		/// <returns>Property info.</returns>
 		/// <exception cref="ArgumentException">It expects the most outer expression to be property access expression. If it is not, an ArgumentException is thrown.</exception>
-		public static PropertyInfo PropertyInfoFromGetter(this LambdaExpression getterSelector)
+		public static PropertyInfo PropertyFromGetter(this LambdaExpression getterSelector)
 		{
 			try
 			{

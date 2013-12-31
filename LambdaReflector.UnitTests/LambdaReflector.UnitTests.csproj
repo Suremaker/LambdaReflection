@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\IFoo.cs" />
     <Compile Include="LambdaReflectorTests.cs" />
     <Compile Include="MethodInfoReflectorTests.cs" />
-    <Compile Include="SomeClass.cs" />
+    <Compile Include="Helpers\SomeClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyReflectorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

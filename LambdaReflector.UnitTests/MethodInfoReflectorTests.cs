@@ -1,16 +1,10 @@
 using System;
 using System.Reflection;
-using LambdaReflector.Core;
+using LambdaReflector.UnitTests.Helpers;
 using NUnit.Framework;
 
 namespace LambdaReflector.UnitTests
 {
-	interface IFoo
-	{
-		string Text { get; set; }
-		void Foo();
-	}
-
 	[TestFixture]
 	public class MethodInfoReflectorTests
 	{

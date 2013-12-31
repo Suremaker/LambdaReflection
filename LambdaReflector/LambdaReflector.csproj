@@ -44,9 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\LambdaReflector.cs" />
-    <Compile Include="Core\MethodInfoReflector.cs" />
+    <Compile Include="LambdaExpressionReflector.cs" />
+    <Compile Include="MethodInfoReflector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Generic\PropertyReflector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

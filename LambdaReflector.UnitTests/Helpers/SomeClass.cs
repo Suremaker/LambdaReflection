@@ -1,4 +1,4 @@
-﻿namespace LambdaReflector.UnitTests
+﻿namespace LambdaReflector.UnitTests.Helpers
 {
 	class SomeClass
 	{
