@@ -8,7 +8,7 @@ namespace LambdaReflection
 	{
 		/// <summary>
 		/// Retrieves method info for method called in <c>methodCall</c> lambda expression.
-		/// The lambda expression is valid if the most outer expression is a method call like:<example></example>
+		/// The lambda expression is valid if the most outer expression is a method call like:
 		/// <code>() => MyClass.Method("abc")</code>, <code>(instance, arg) => instance.Method(arg)</code>, etc.
 		/// Please note that expression like <code>x => x.Method().ToString()</code> will return method info of ToString().
 		/// </summary>

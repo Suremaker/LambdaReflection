@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generic\MethodReflector.cs" />
     <Compile Include="LambdaReflector.cs" />
     <Compile Include="MethodInfoReflector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
