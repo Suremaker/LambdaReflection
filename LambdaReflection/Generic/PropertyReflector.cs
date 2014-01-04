@@ -5,6 +5,9 @@ using DelegateDecompiler;
 
 namespace LambdaReflection.Generic
 {
+	/// <summary>
+	/// Provides methods for reflecting PropertyInfo of <c>TType</c> member properties by using lambda expressions.
+	/// </summary>
 	public static class PropertyReflector<TType>
 	{
 		/// <summary>

@@ -49,15 +49,30 @@ namespace LambdaReflection.UnitTests
 		public void Should_get_property_info_from_getter_lambda()
 		{
 			Expression<Func<SomeClass, string>> getterSelector = c => c.Prop;
-			Assert.That(LambdaReflector.PropertyFromGetter(getterSelector), Is.EqualTo(typeof(SomeClass).GetProperty("Prop")));
+			Assert.That(getterSelector.PropertyFromGetter(), Is.EqualTo(typeof(SomeClass).GetProperty("Prop")));
 		}
 
 		[Test]
 		public void Should_MethodInfoFromMethodCall_throw_if_expression_is_not_accessing_property_getter()
 		{
 			Expression<Action> methodCall = () => SomeClass.Bar();
-			var exception = Assert.Throws<ArgumentException>(() => LambdaReflector.PropertyFromGetter(methodCall));
+			var exception = Assert.Throws<ArgumentException>(() => methodCall.PropertyFromGetter());
 			Assert.That(exception.Message, Is.EqualTo("Expected getter selector lambda, got: () => Bar()"));
+		}
+
+		[Test]
+		public void Should_get_method_info_from_lambda_returning_delegate()
+		{
+			Expression<Func<SomeClass, Func<int>>> methodSelector = c => c.Foo;
+			Assert.That(methodSelector.MethodFromDelegateResult(), Is.EqualTo(typeof(SomeClass).GetMethod("Foo", new Type[0])));
+		}
+
+		[Test]
+		public void Should_MethodFromDelegateResult_throw_if_expression_is_not_returning_delegate()
+		{
+			Expression<Action> methodCall = () => SomeClass.Bar();
+			var exception = Assert.Throws<ArgumentException>(() => methodCall.MethodFromDelegateResult());
+			Assert.That(exception.Message, Is.EqualTo("Expected lambda expression returning method delegate, got: () => Bar()"));
 		}
 	}
 }

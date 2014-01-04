@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace LambdaReflection
 {
+	/// <summary>
+	/// Extends LambdaExpression with methods providing information about methods / properties used in expressions.
+	/// </summary>
 	public static class LambdaReflector
 	{
 		/// <summary>
@@ -24,6 +27,28 @@ namespace LambdaReflection
 			catch (Exception e)
 			{
 				throw new ArgumentException(string.Format("Expected method call lambda expression, got: {0}", methodCall), e);
+			}
+		}
+
+		/// <summary>
+		/// Retrieves method info for delegate returned by <c>methodDelegate</c> lambda expression.
+		/// The lambda expression is valid if it returns method delegate, like in following example: <code>instance => instance.Method</code>.
+		/// </summary>
+		/// <param name="methodDelegate">Lambda expression returning method delegate.</param>
+		/// <returns>Method info.</returns>
+		/// <exception cref="ArgumentException">If lambda does not return delegate to a method, an ArgumentException is thrown.</exception>
+		public static MethodInfo MethodFromDelegateResult(this LambdaExpression methodDelegate)
+		{
+			try
+			{
+				var convertExpression = (UnaryExpression)methodDelegate.Body;
+				var createDelegateExpression = (MethodCallExpression)convertExpression.Operand;
+				var methodInfoArgument = (ConstantExpression)createDelegateExpression.Arguments[2];
+				return (MethodInfo)methodInfoArgument.Value;
+			}
+			catch (Exception e)
+			{
+				throw new ArgumentException(string.Format("Expected lambda expression returning method delegate, got: {0}", methodDelegate), e);
 			}
 		}
 

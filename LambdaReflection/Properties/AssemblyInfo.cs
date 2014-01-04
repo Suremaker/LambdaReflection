@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LambdaReflection")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Provides methods for reflecting member information by using lambda expressions.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LambdaReflection")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCopyright("Copyright © 2013-2014, Wojciech Kotlarski")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

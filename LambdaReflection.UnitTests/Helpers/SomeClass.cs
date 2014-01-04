@@ -20,5 +20,9 @@
 		{
 			return 5;
 		}
+
+		public void Baz(string x) { }
+
+		public void Action(int a1, string a2, long a3, char a4, object a5) { }
 	}
 }

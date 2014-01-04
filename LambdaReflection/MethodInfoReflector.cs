@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace LambdaReflection
 {
+	/// <summary>
+	/// Extends MethodInfo with method allowing to determine property info basing on accessor method.
+	/// </summary>
 	public static class MethodInfoReflector
 	{
 		/// <summary>
